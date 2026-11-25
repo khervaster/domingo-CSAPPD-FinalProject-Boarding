@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="brand">
+    <a routerLink="/home">DoManage</a>
+    <span class="badge">{{ recordService.currentRole() }}</span>
+  </div>
+
+  <div class="links">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/records" routerLinkActive="active">Records</a>
+    <a routerLink="/records/create" routerLinkActive="active">+ New Request</a>
+  </div>
+
+  <button type="button" class="toggle-btn" (click)="recordService.toggleRole()">
+    Switch to {{ recordService.currentRole() === 'Management' ? 'Boarder' : 'Management' }}
+  </button>
+</nav>

@@ -1,0 +1,10 @@
+<h2>Boarding House Records ({{ recordService.currentRole() }} View)</h2>
+
+<div class="list">
+  @for (item of records(); track item._id) {
+    <div class="card">
+      <strong>{{ item.roomNumber }} - {{ item.tenantName }}</strong>
+      <span>{{ item.serviceType }} | ₱{{ item.amount }} | {{ item.status }}</span>
+    </div>
+  }
+</div>

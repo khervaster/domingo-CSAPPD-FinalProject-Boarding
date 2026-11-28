@@ -8,7 +8,7 @@ import { ServiceRecord } from '../../models/service-record';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './record-list.html',
-  styleUrl: './record-list.css'
+  styleUrl: './record-list.css',
 })
 export class RecordList implements OnInit {
   recordService = inject(RecordService);
@@ -16,7 +16,7 @@ export class RecordList implements OnInit {
 
   ngOnInit(): void {
     this.recordService.getRecords().subscribe({
-      next: data => this.records.set(data)
+      next: (data) => this.records.set(data),
     });
   }
 }

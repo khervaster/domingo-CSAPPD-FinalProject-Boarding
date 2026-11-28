@@ -81,4 +81,3 @@ mongoose
     console.error('MongoDB Error: DB connection failed:', err.message);
     process.exit(1);
   });
-a;
